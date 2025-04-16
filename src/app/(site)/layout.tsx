@@ -16,7 +16,7 @@ import PreviewSliderModal from "@/components/Common/PreviewSlider";
 import ScrollToTop from "@/components/Common/ScrollToTop";
 import PreLoader from "@/components/Common/PreLoader";
 import { ThemeProvider } from "../../components/theme/themeProvider";
-import './globals.css' // This imports your CSS file
+import '@/app/globals.css' // This imports your CSS file
 
 export default function RootLayout({
   children,

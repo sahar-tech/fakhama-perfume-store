@@ -18,8 +18,10 @@ const Orders = () => {
 
   return (
     <>
-      <div className="w-full overflow-x-auto">
-        <div className="min-w-[770px]">
+      <div className="w-full overflow-x-auto" style={{
+        scrollbarColor: "gray white", /* thumb and track */
+      }}>
+        <div className="min-w-[770px] bg-white fill-gray">
           {/* <!-- order item --> */}
           {ordersData.length > 0 && (
             <div className="items-center justify-between py-4.5 px-7.5 hidden md:flex ">
@@ -57,7 +59,6 @@ const Orders = () => {
             </p>
           )}
         </div>
-
         {ordersData.length > 0 &&
           ordersData.map((orderItem, key) => (
             <SingleOrder key={key} orderItem={orderItem} smallView={true} />

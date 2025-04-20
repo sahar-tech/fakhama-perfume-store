@@ -7,7 +7,7 @@ const BlogDetails = () => {
   return (
     <>
       <Breadcrumb title={"Blog Details"} pages={["blog details"]} />
-      <section className="overflow-hidden py-20 bg-gray-2">
+      <section className="overflow-hidden py-20 bg-background">
         <div className="max-w-[750px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="rounded-[10px] overflow-hidden mb-7.5">
             <Image

@@ -31,9 +31,8 @@ const HeroFeature = () => {
         {featureData.map((item, key) => (
           <div className="flex items-center gap-4" key={key}>
             <Image src={item.img} alt="icons" width={40} height={41} />
-
             <div>
-              <h3 className="font-medium text-lg text-dark">{item.title}</h3>
+              <h3 className="font-medium text-lg text-foreground">{item.title}</h3>
               <p className="text-sm">{item.description}</p>
             </div>
           </div>

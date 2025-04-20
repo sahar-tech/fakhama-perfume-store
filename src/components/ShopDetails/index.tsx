@@ -97,7 +97,7 @@ const ShopDetails = () => {
     <>
       <Breadcrumb title={"Shop Details"} pages={["shop details"]} />
 
-      {product.title === "" ? (
+      {product.title != "" ? (
         "Please add product"
       ) : (
         <>

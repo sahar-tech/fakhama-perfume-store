@@ -41,7 +41,8 @@ export default function RootLayout({
               defaultTheme="system"
               enableSystem
               disableTransitionOnChange
-            >            <ReduxProvider>
+            >
+              <ReduxProvider>
                 <CartModalProvider>
                   <ModalProvider>
                     <PreviewSliderProvider>

@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
+import { ThemeSwitcher } from "../theme/themeSwitcher";
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -49,7 +50,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-9999 bg-white transition-all ease-in-out duration-300 ${
+      className={`fixed left-0 top-0 w-full z-9999 bg-background transition-all ease-in-out duration-300 ${
         stickyMenu && "shadow "
       }`}
     >
@@ -87,7 +88,7 @@ const Header = () => {
                       id="search"
                       placeholder="I am shopping for..."
                       autoComplete="off"
-                      className="custom-search w-full rounded-r-[5px] bg-gray-1 !border-l-0 border border-gray-3 py-2.5 pl-4 pr-10 outline-none ease-in duration-200"
+                      className="custom-search w-full rounded-r-[5px] bg-gray-1 !border-l-0 border border-border py-2.5 pl-4 pr-10 outline-none ease-in duration-200"
                     />
 
                     <button
@@ -144,10 +145,10 @@ const Header = () => {
               </svg>
 
               <div>
-                <span className="block text-2xs text-dark-4 uppercase">
+                <span className="block text-2xs text-foreground-4 uppercase">
                   24/7 SUPPORT
                 </span>
-                <p className="font-medium text-custom-sm text-dark">
+                <p className="font-medium text-custom-sm text-foreground">
                   (+965) 7492-3477
                 </p>
               </div>
@@ -155,9 +156,10 @@ const Header = () => {
 
             {/* <!-- divider --> */}
             <span className="hidden xl:block w-px h-7.5 bg-gray-4"></span>
-
+            <ThemeSwitcher />
             <div className="flex w-full lg:w-auto justify-between items-center gap-5">
               <div className="flex items-center gap-5">
+
                 <Link href="/signin" className="flex items-center gap-2.5">
                   <svg
                     width="24"
@@ -181,10 +183,10 @@ const Header = () => {
                   </svg>
 
                   <div>
-                    <span className="block text-2xs text-dark-4 uppercase">
+                    <span className="block text-2xs text-foreground-4 uppercase">
                       account
                     </span>
-                    <p className="font-medium text-custom-sm text-dark">
+                    <p className="font-medium text-custom-sm text-foreground">
                       Sign In
                     </p>
                   </div>
@@ -232,10 +234,10 @@ const Header = () => {
                   </span>
 
                   <div>
-                    <span className="block text-2xs text-dark-4 uppercase">
+                    <span className="block text-2xs text-foreground-4 uppercase">
                       cart
                     </span>
-                    <p className="font-medium text-custom-sm text-dark">
+                    <p className="font-medium text-custom-sm text-foreground">
                       ${totalPrice}
                     </p>
                   </div>
@@ -289,14 +291,14 @@ const Header = () => {
         {/* <!-- header top end --> */}
       </div>
 
-      <div className="border-t border-gray-3">
+      <div className="border-t border-border">
         <div className="max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
           <div className="flex items-center justify-between">
             {/* <!--=== Main Nav Start ===--> */}
             <div
               className={`w-[288px] absolute right-4 top-full xl:static xl:w-auto h-0 xl:h-auto invisible xl:visible xl:flex items-center justify-between ${
                 navigationOpen &&
-                `!visible bg-white shadow-lg border border-gray-3 !h-auto max-h-[400px] overflow-y-scroll rounded-md p-5`
+                `!visible bg-background shadow-lg border border-border !h-auto max-h-[400px] overflow-y-scroll rounded-md p-5`
               }`}
             >
               {/* <!-- Main Nav Start --> */}
@@ -316,7 +318,7 @@ const Header = () => {
                       >
                         <Link
                           href={menuItem.path}
-                          className={`hover:text-blue text-custom-sm font-medium text-dark flex ${
+                          className={`hover:text-blue text-custom-sm font-medium text-foreground flex ${
                             stickyMenu ? "xl:py-4" : "xl:py-6"
                           }`}
                         >
@@ -337,7 +339,7 @@ const Header = () => {
                 <li className="py-4">
                   <a
                     href="#"
-                    className="flex items-center gap-1.5 font-medium text-custom-sm text-dark hover:text-blue"
+                    className="flex items-center gap-1.5 font-medium text-custom-sm text-foreground hover:text-blue"
                   >
                     <svg
                       className="fill-current"
@@ -363,7 +365,7 @@ const Header = () => {
                 <li className="py-4">
                   <Link
                     href="/wishlist"
-                    className="flex items-center gap-1.5 font-medium text-custom-sm text-dark hover:text-blue"
+                    className="flex items-center gap-1.5 font-medium text-custom-sm text-foreground hover:text-blue"
                   >
                     <svg
                       className="fill-current"

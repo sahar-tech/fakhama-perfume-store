@@ -22,7 +22,7 @@ const SingleItem = ({ item }) => {
       })
     );
   };
-
+  
   return (
     <div className="flex items-center border-t border-gray-3 py-5 px-10">
       <div className="min-w-[83px]">

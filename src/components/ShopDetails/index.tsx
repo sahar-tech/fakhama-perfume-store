@@ -76,6 +76,7 @@ const ShopDetails = () => {
   const colors = ["red", "blue", "orange", "pink", "purple"];
 
   const alreadyExist = localStorage.getItem("productDetails");
+  
   const productFromStorage = useAppSelector(
     (state) => state.productDetailsReducer.value
   );
@@ -97,11 +98,11 @@ const ShopDetails = () => {
     <>
       <Breadcrumb title={"Shop Details"} pages={["shop details"]} />
 
-      {product.title != "" ? (
+      {product.title === "" ? (
         "Please add product"
       ) : (
         <>
-          <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28">
+          <section className="overflow-hidden relative pb-20 pt-5 lg:pt-10 xl:pt-28">
             <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
               <div className="flex flex-col lg:flex-row gap-7.5 xl:gap-17.5">
                 <div className="lg:max-w-[570px] w-full">

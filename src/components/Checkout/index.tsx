@@ -12,7 +12,7 @@ const Checkout = () => {
   return (
     <>
       <Breadcrumb title={"Checkout"} pages={["checkout"]} />
-      <section className="overflow-hidden py-20 bg-background">
+      <section className="overflow-hidden py-10 bg-card">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <form>
             <div className="flex flex-col lg:flex-row gap-7.5 xl:gap-11">

@@ -19,11 +19,9 @@ const ShopWithoutSidebar = () => {
 
   return (
     <>
-      <Breadcrumb
-        title={"Explore All Products"}
-        pages={["shop", "/", "shop without sidebar"]}
-      />
-      <section className="overflow-hidden relative pb-20 pt-5 lg:pt-20 xl:pt-28 bg-background">
+      <Breadcrumb title={"Explore All Products"} pages={["shop", "/", "shop without sidebar"]} />
+      
+      <section className="overflow-hidden relative py-10 bg-card">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-7.5">
             {/* // <!-- Content Start --> */}
@@ -34,9 +32,9 @@ const ShopWithoutSidebar = () => {
                   <div className="flex flex-wrap items-center gap-4">
                     <CustomSelect options={options} />
 
-                    <p>
-                      Showing <span className="text-dark">9 of 50</span>{" "}
-                      Products
+                    <p className="text-dark-3">
+                      Showing <span className="text-gray-4"> 9 </span>
+                      of <span className="text-gray-4"> 50 </span> Products
                     </p>
                   </div>
 

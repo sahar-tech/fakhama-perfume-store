@@ -1,4 +1,4 @@
-export type BlogItem = {
+export type BlogSimpleItem = {
   date: string;
   views: number;
   title: string;

@@ -334,7 +334,7 @@ const Footer = () => {
       </div>
 
       {/* <!-- footer bottom start --> */}
-      <div className="py-5 xl:py-7.5 bg-background text-foreground">
+      <div className="py-5 xl:py-7.5 bg-card text-foreground">
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-5 flex-wrap items-center justify-between">
             <p className="font-medium">

@@ -46,7 +46,7 @@ const SingleListItem = ({ item }: { item: Product }) => {
         <div className="shadow-list relative overflow-hidden flex items-center justify-center max-w-[270px] w-full sm:min-h-[270px] p-4">
           <Image src={item.imgs.previews[0]} alt="" width={250} height={250} />
 
-          <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
+          <div className="absolute group-hover:bg-custom-hover left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-4 pt-8 ease-linear duration-200 group-hover:translate-y-0">
             <button
               onClick={() => {
                 openModal();
@@ -117,7 +117,7 @@ const SingleListItem = ({ item }: { item: Product }) => {
 
             <span className="flex items-center gap-2 font-medium text-lg">
               <span className="text-foreground">${item.discountedPrice}</span>
-              <span className="text-gray-2 line-through">${item.price}</span>
+              <span className="text-gray-5 line-through">${item.price}</span>
             </span>
           </div>
 

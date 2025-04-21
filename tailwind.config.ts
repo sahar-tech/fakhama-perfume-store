@@ -131,6 +131,7 @@ const config: Config = {
         DEFAULT: "#F27430",
         dark: "#E1580E",
       },
+      'custom-hover': 'rgba(0, 0, 0, 0.15)',
     },
     screens: {
       xsm: "375px",

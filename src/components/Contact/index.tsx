@@ -1,7 +1,10 @@
 import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Breadcrumb title={"Contact"} pages={["contact"]} />

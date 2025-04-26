@@ -6,6 +6,7 @@ import Newsletter from "../Common/Newsletter";
 import RecentlyViewdItems from "./RecentlyViewd";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { useAppSelector } from "@/redux/store";
+import { useTranslation } from "react-i18next";
 
 const ShopDetails = () => {
   const [activeColor, setActiveColor] = useState("blue");
@@ -16,6 +17,7 @@ const ShopDetails = () => {
   const [type, setType] = useState("active");
   const [sim, setSim] = useState("dual");
   const [quantity, setQuantity] = useState(1);
+  const { t } = useTranslation();
 
   const [activeTab, setActiveTab] = useState("tabOne");
 

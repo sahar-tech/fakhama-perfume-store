@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Billing = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="mt-9">
       <h2 className="font-medium text-foreground text-xl sm:text-2xl mb-5.5">

@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const OrderDetails = ({ orderItem }: any) => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <div className="items-center justify-between py-4.5 px-7.5 hidden md:flex ">

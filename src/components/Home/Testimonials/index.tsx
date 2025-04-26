@@ -8,9 +8,11 @@ import Image from "next/image";
 import "swiper/css/navigation";
 import "swiper/css";
 import SingleItem from "./SingleItem";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
   const sliderRef = useRef(null);
+  const { t } = useTranslation();
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;

@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import OrderDetails from "./OrderDetails";
 import EditOrder from "./EditOrder";
+import { useTranslation } from "react-i18next";
 
 const OrderModal = ({ showDetails, showEdit, toggleModal, order }: any) => {
   if (!showDetails && !showEdit) {
     return null;
   }
+  const { t } = useTranslation();
 
   return (
     <>

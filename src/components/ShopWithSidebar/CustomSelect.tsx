@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const CustomSelect = ({ options }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const selectRef = useRef(null);
+  const { t } = useTranslation();
 
   // Function to close the dropdown when a click occurs outside the component
   const handleClickOutside = (event) => {

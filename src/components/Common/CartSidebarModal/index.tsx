@@ -11,12 +11,14 @@ import { useSelector } from "react-redux";
 import SingleItem from "./SingleItem";
 import Link from "next/link";
 import EmptyCart from "./EmptyCart";
+import { useTranslation } from "react-i18next";
 
 const CartSidebarModal = () => {
   const { isCartModalOpen, closeCartModal } = useCartModalContext();
   const cartItems = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
-
+  const { t } = useTranslation();
+  
   useEffect(() => {
     // closing modal while clicking outside
     function handleClickOutside(event) {

@@ -7,8 +7,11 @@ import ShippingMethod from "./ShippingMethod";
 import PaymentMethod from "./PaymentMethod";
 import Coupon from "./Coupon";
 import Billing from "./Billing";
+import { useTranslation } from "react-i18next";
 
 const Checkout = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Breadcrumb title={"Checkout"} pages={["checkout"]} />

@@ -7,9 +7,11 @@ import SingleListItem from "../Shop/SingleListItem";
 import CustomSelect from "../ShopWithSidebar/CustomSelect";
 
 import shopData from "../Shop/shopData";
+import { useTranslation } from "react-i18next";
 
 const ShopWithoutSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
+  const { t } = useTranslation();
 
   const options = [
     { label: "Latest Products", value: "0" },

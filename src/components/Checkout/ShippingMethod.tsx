@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const ShippingMethod = () => {
+  const { t } = useTranslation();
   const [shippingMethod, setShippingMethod] = useState("free");
+  
   return (
     <div className="bg-white shadow-1 rounded-[10px] mt-7.5">
       <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">

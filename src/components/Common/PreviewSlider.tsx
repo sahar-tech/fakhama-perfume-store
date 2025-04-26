@@ -7,10 +7,12 @@ import Image from "next/image";
 
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { useAppSelector } from "@/redux/store";
+import { useTranslation } from "react-i18next";
 
 const PreviewSliderModal = () => {
   const { closePreviewModal, isModalPreviewOpen } = usePreviewSlider();
-
+  const { t } = useTranslation();
+  
   const data = useAppSelector((state) => state.productDetailsReducer.value);
 
   const sliderRef = useRef(null);

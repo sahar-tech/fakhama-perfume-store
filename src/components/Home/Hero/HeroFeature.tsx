@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const featureData = [
   {
@@ -25,6 +26,8 @@ const featureData = [
 ];
 
 const HeroFeature = () => {
+    const { t } = useTranslation();
+  
   return (
     <div className="max-w-[1060px] w-full mx-auto px-4 sm:px-8 xl:px-0">
       <div className="flex flex-wrap items-center gap-7.5 xl:gap-12.5 mt-10">

@@ -6,8 +6,11 @@ import LatestProducts from "../Blog/LatestProducts";
 import blogData from "../BlogGrid/blogData";
 import Image from "next/image";
 import shopData from "../Shop/shopData"; 
+import { useTranslation } from "react-i18next";
 
 const BlogDetailsWithSidebar = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Breadcrumb

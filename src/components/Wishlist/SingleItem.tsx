@@ -6,6 +6,7 @@ import { removeItemFromWishlist } from "@/redux/features/wishlist-slice";
 import { addItemToCart } from "@/redux/features/cart-slice";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SingleItem = ({ item }) => {
   const dispatch = useDispatch<AppDispatch>();
@@ -13,6 +14,7 @@ const SingleItem = ({ item }) => {
   const handleRemoveFromWishlist = () => {
     dispatch(removeItemFromWishlist(item.id));
   };
+  const { t } = useTranslation();
 
   const handleAddToCart = () => {
     dispatch(

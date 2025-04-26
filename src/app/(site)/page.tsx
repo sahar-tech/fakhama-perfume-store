@@ -1,16 +1,10 @@
-import Home from "@/components/Home";
-import { Metadata } from "next";
+'use client'; // Add this at the top
 
-export const metadata: Metadata = {
-  title: "NextCommerce | Nextjs E-commerce template",
-  description: "This is Home for NextCommerce Template",
-  // other metadata
-};
+import Home from "@/components/Home";
+import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  const { t } = useTranslation();
+
+  return ( <Home /> );
 }

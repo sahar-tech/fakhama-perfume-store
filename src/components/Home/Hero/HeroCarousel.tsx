@@ -7,8 +7,11 @@ import "swiper/css/pagination";
 import "swiper/css";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const HeroCarousal = () => {
+    const { t } = useTranslation();
+  
   return (
     <Swiper
       spaceBetween={30}

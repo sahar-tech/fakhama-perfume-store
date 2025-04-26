@@ -1,8 +1,11 @@
 import { Category } from "@/types/category";
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SingleItem = ({ item }: { item: Category }) => {
+    const { t } = useTranslation();
+  
   return (
     <a href="#" className="group flex flex-col items-center">
       <div className="max-w-[130px] w-full bg-[#F2F3F8] h-32.5 rounded-full flex items-center justify-center mb-4">

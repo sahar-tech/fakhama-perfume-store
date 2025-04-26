@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const AddressModal = ({ isOpen, closeModal }) => {
+    const { t } = useTranslation();
+  
   useEffect(() => {
     // closing modal while clicking outside
     function handleClickOutside(event) {

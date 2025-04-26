@@ -3,8 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductItem from "@/components/Common/ProductItem";
 import shopData from "@/components/Shop/shopData";
+import { useTranslation } from "react-i18next";
 
 const NewArrival = () => {
+    const { t } = useTranslation();
+  
   return (
     <section className="overflow-hidden py-10">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">

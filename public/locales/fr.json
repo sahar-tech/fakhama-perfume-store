@@ -1,6 +1,283 @@
 {
-  "Home": {
-    "title": "NextCommerce | Nextjs E-commerce template",
-    "description": "Ceci est la page d'accueil du modèle NextCommerce"
+    "global": {
+      "actions": {
+        "view": "Voir",
+        "hide": "Masquer",
+        "show": "Afficher",
+        "load": "Charger",
+        "search": "Recherche",
+        "apply": "Appliquer",
+        "reset": "Réinitialiser",
+        "change": "Changer",
+        "update": "Mettre à jour",
+        "add": "Ajouter",
+        "delete": "Supprimer",
+        "cancel": "Annuler",
+        "edit": "Éditer",
+        "buy": "Acheter",
+        "send": "Envoyer",
+        "submit": "Soumettre",
+        "show_all": "Afficher tout ${}",
+        "hide_all": "Masquer tout ${}"
+      },
+      "navigation": {
+        "home": "Accueil",
+        "shop": "Magasin",
+        "contact": "Contact",
+        "about": "À propos",
+        "blog": "Blog",
+        "account": "Compte",
+        "cart": "Panier",
+        "wishlist": "Favoris",
+        "help": "Aide",
+        "support": "Assistance",
+        "checkout": "Caisse",
+        "order": "Commande",
+        "more": "Plus",
+        "less": "Moins"
+      }
+    },
+    "auth": {
+      "sign_in": "Se connecter",
+      "sign_out": "Se déconnecter",
+      "sign_up": "S'inscrire",
+      "sign_in_up": "Se connecter / S'inscrire",
+      "login": "Connexion",
+      "register": "S'inscrire",
+      "welcome": "Bienvenue",
+      "forgot_password": "Mot de passe oublié?",
+      "reset_password": "Réinitialiser le mot de passe",
+      "no_account": "Vous n'avez pas de compte?",
+      "have_account": "Vous avez déjà un compte?",
+      "welcome_back": "Bienvenue à nouveau",
+      "create_account": "Créer un compte",
+      "remember_me": "Se souvenir de moi"
+    },
+    "user": {
+      "account": "Mon compte",
+      "profile": "Profil",
+      "member_since": "Membre depuis ${}",
+      "settings": "Paramètres",
+      "details": "Détails",
+      "details_of": "Détails de ${}",
+      "history": "Historique",
+      "recent": "Récemment consultés",
+      "recent_views": "Articles récemment consultés",
+      "orders": {
+        "my_orders": "Mes commandes",
+        "tracking": "Suivi de commande",
+        "summary": "Résumé de la commande",
+        "your_order": "Votre commande"
+      },
+      "address": {
+        "book": "Carnet d'adresses",
+        "shipping": "Adresse de livraison",
+        "billing": "Adresse de facturation",
+        "info": {
+          "shipping": "Informations de livraison",
+          "billing": "Informations de facturation"
+        }
+      },
+      "password": {
+        "old": "Ancien mot de passe",
+        "new": "Nouveau mot de passe",
+        "confirm": "Confirmer le nouveau mot de passe",
+        "current": "Mot de passe actuel"
+      },
+      "greeting": {
+        "hello": "Bonjour ${} !",
+        "hello_logout": "Bonjour ${} (pas ${} ? Déconnexion)",
+        "last_login": "Dernière connexion ${}"
+      },
+      "feedback": {
+        "user": "Commentaires des utilisateurs",
+        "reviews": "Avis des utilisateurs",
+        "testimonials": "Témoignages",
+        "customer_reviews": "Avis des clients"
+      }
+    },
+    "shop": {
+      "cart": {
+        "title": "Panier",
+        "empty": "Votre ${} est vide!",
+        "continue": "Continuer vos achats"
+      },
+      "product": {
+        "new": "Nouveau",
+        "sale": "En vente",
+        "featured": "En vedette",
+        "bestseller": "Meilleures ventes",
+        "add_to_cart": "Ajouter au panier",
+        "add_to_wishlist": "Ajouter aux favoris",
+        "show_x_of_y": "Affichage de ${} sur ${} produits",
+        "categories": "Catégories",
+        "all_categories": "Toutes les catégories",
+        "browse_category": "Parcourir par catégorie",
+        "latest": "Derniers produits"
+      },
+      "checkout": {
+        "title": "Caisse",
+        "billing": "Facturation",
+        "shipping": "Livraison",
+        "payment": "Paiement",
+        "method": {
+          "shipping": "Méthode d'expédition",
+          "payment": "Méthode de paiement"
+        },
+        "percent_off": "Réduction de ${}%",
+        "coupon": "Code promo?",
+        "notes": "Notes",
+        "different_address": "Adresse de livraison différente?"
+      }
+    },
+    "common": {
+      "actions": {
+        "view": "Voir",
+        "view_all": "Voir tout",
+        "add": "Ajouter",
+        "buy": "Acheter",
+        "submit": "Soumettre",
+        "send": "Envoyer",
+        "change": "Changer",
+        "update": "Mettre à jour",
+        "reset": "Réinitialiser",
+        "clear": "Effacer",
+        "load": {
+          "more": "Charger plus",
+          "less": "Charger moins",
+          "all": "Charger tout"
+        }
+      },
+      "forms": {
+        "placeholders": {
+          "optional": "(optionnel)",
+          "search": "Rechercher ici"
+        },
+        "fields": {
+          "username": "Nom d'utilisateur",
+          "fullname": "Nom et Prénom",
+          "firstname": "Prénom",
+          "lastname": "Nom",
+          "name": "Nom",
+          "email": "Adresse e-mail",
+          "password": "Mot de passe",
+          "confirm_password": "Confirmer le mot de passe",
+          "phone": "Numéro de téléphone",
+          "address": "Adresse",
+          "address_line": "Adresse de la rue",
+          "street": "Adresse de la rue",
+          "apt": "Appartement, suite, etc. (optionnel)",
+          "city": "Ville",
+          "state": "État",
+          "province": "Province",
+          "zip": "Code postal",
+          "country": "Pays/Région",
+          "message": "Message",
+          "subject": "Sujet",
+          "enter_details": "Entrez vos détails ci-dessous"
+        }
+      },
+      "navigation": {
+        "dashboard": "Tableau de bord",
+        "quick_links": "Liens rapides",
+        "contact": "Contactez-nous",
+        "about": "À propos",
+        "blog": "Blog"
+      },
+      "messages": {
+        "404": {
+          "title": "Désolé, la page est introuvable",
+          "description": "La page que vous recherchez semble avoir été déplacée, supprimée ou n'existe pas."
+        },
+        "success": "Succès",
+        "error": "Erreur",
+        "warning": "Avertissement",
+        "info": "Info",
+        "welcome": "Bienvenue dans notre magasin",
+        "email_success": "Votre message a été envoyé avec succès",
+        "email_error": "Erreur lors de l'envoi de votre message",
+        "email_invalid": "Adresse e-mail invalide",
+        "email_fail": "L'envoi de votre message a échoué",
+        "email_thanks": "Merci beaucoup pour votre message. Nous vérifions les e-mails fréquemment et nous ferons de notre mieux pour répondre à votre demande"
+      },
+      "policies": {
+        "terms": "Conditions d'utilisation",
+        "privacy": "Confidentialité",
+        "refund": "Remboursement",
+        "shipping": "Expédition"
+      },
+      "time": {
+        "second": "Seconde",
+        "minute": "Minute",
+        "hour": "Heure",
+        "day": "Jour",
+        "week": "Semaine",
+        "month": "Mois",
+        "year": "An",
+        "ago": "Il y a",
+        "just_now": "À l'instant",
+        "yesterday": "Hier",
+        "today": "Aujourd'hui",
+        "this_week": "Cette semaine",
+        "this_month": "Ce mois",
+        "this_year": "Cette année"
+      }
+    },
+    "marketing": {
+      "new_arrivals": "Nouveaux arrivages",
+      "limited_offer": "Offre à durée limitée",
+      "discount": "JUSQU'À ${}% DE RÉDUCTION",
+      "promo": {
+        "free_shipping": "Livraison gratuite",
+        "free_returns": "Retours gratuits",
+        "secure_payments": "Paiements sécurisés",
+        "support": "Assistance dédiée 24/7",
+        "1_1_returns": "1 & 1 retours"
+      },
+      "cta": {
+        "shop_now": "Acheter maintenant",
+        "dont_miss": "Ne manquez pas",
+        "dont_miss_out": "Ne manquez pas les dernières tendances et offres",
+        "hurry": "Dépêchez-vous",
+        "hurry_up": "Dépêchez-vous",
+        "register": "Inscrivez-vous pour recevoir des nouvelles sur les dernières offres et codes de réduction",
+        "grab_now": "Saisissez-le maintenant",
+        "get_it_now": "Obtenez-le maintenant",
+        "check_out": "Vérifiez"
+      },
+      "app": {
+        "download": "Télécharger l'application"
+      },
+      "subscription": {
+        "subscribe": "S'abonner",
+        "enter_email": "Entrez votre e-mail"
+      }
+    },
+    "footer": {
+      "follow_us": "Suivez-nous",
+      "contact_us": "Contactez-nous",
+      "contact_info": "Informations de contact",
+      "location": "Emplacement",
+      "location_map": "Carte de localisation",
+      "explore_all_products": "Explorer tous les produits",
+      "contact_us_questions": "Contactez-nous pour toute question",
+      "payment_methods": "Nous acceptons",
+      "copyright": "Droits d'auteur",
+      "rights_reserved": "Tous droits réservés par"
+    },
+    "ui": {
+      "filters": "Filtres",
+      "clean_all": "Tout nettoyer",
+      "clear_all": "Tout effacer",
+      "reset_all": "Tout réinitialiser",
+      "reset_filters": "Réinitialiser les filtres",
+      "more_info": "Plus d'infos",
+      "less_info": "Moins d'infos",
+      "view_more": "Voir plus",
+      "view_less": "Voir moins",
+      "read_more": "Lire la suite",
+      "read_less": "Lire moins",
+      "show_more": "Afficher plus",
+      "show_less": "Afficher moins"
+    }
   }
-}

@@ -2,8 +2,11 @@ import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import blogData from "./blogData";
 import BlogItem from "../Blog/BlogItem";
+import { useTranslation } from "react-i18next";
 
 const BlogGrid = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Breadcrumb title={"Blog Grid"} pages={["blog grid"]} />{" "}

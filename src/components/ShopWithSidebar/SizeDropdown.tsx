@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const SizeDropdown = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
+    const { t } = useTranslation();
+  
   return (
     <div className="bg-white shadow-1 rounded-lg">
       <div

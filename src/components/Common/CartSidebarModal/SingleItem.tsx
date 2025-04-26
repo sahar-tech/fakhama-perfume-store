@@ -2,10 +2,11 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SingleItem = ({ item, removeItemFromCart }) => {
   const dispatch = useDispatch<AppDispatch>();
-
+  const { t } = useTranslation();
   const handleRemoveFromCart = () => {
     dispatch(removeItemFromCart(item.id));
   };

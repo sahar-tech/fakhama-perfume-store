@@ -1,6 +1,283 @@
 {
-  "Home": {
-    "title": "NextCommerce | Nextjs E-commerce template",
-    "description": "This is Home for NextCommerce Template"
+    "global": {
+      "actions": {
+        "view": "View",
+        "hide": "Hide",
+        "show": "Show",
+        "load": "Load",
+        "search": "Search",
+        "apply": "Apply",
+        "reset": "Reset",
+        "change": "Change",
+        "update": "Update",
+        "add": "Add",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "edit": "Edit",
+        "buy": "Buy",
+        "send": "Send",
+        "submit": "Submit",
+        "show_all": "Show all ${}",
+        "hide_all": "Hide all ${}"
+      },
+      "navigation": {
+        "home": "Home",
+        "shop": "Shop",
+        "contact": "Contact",
+        "about": "About",
+        "blog": "Blog",
+        "account": "Account",
+        "cart": "Cart",
+        "wishlist": "Wishlist",
+        "help": "Help",
+        "support": "Support",
+        "checkout": "Checkout",
+        "order": "Order",
+        "more": "More",
+        "less": "Less"
+      }
+    },
+    "auth": {
+      "sign_in": "Sign in",
+      "sign_out": "Sign out",
+      "sign_up": "Sign up",
+      "sign_in_up": "Sign in / Sign up",
+      "login": "Login",
+      "register": "Register",
+      "welcome": "Welcome",
+      "forgot_password": "Forgot password?",
+      "reset_password": "Reset password",
+      "no_account": "Don't have an account?",
+      "have_account": "Already have an account?",
+      "welcome_back": "Welcome back",
+      "create_account": "Create account",
+      "remember_me": "Remember me"
+    },
+    "user": {
+      "account": "My account",
+      "profile": "Profile",
+      "member_since": "Member since ${}",
+      "settings": "Settings",
+      "details": "Details",
+      "details_of": "${} details",
+      "history": "History",
+      "recent": "Recently viewed",
+      "recent_views": "Recently viewed items",
+      "orders": {
+        "my_orders": "My orders",
+        "tracking": "Order tracking",
+        "summary": "Order summary",
+        "your_order": "Your order"
+      },
+      "address": {
+        "book": "Address book",
+        "shipping": "Shipping address",
+        "billing": "Billing address",
+        "info": {
+          "shipping": "Shipping information",
+          "billing": "Billing information"
+        }
+      },
+      "password": {
+        "old": "Old password",
+        "new": "New password",
+        "confirm": "Confirm new password",
+        "current": "Current password"
+      },
+      "greeting": {
+        "hello": "Hello ${}!",
+        "hello_logout": "Hello ${} (not ${}? Logout)",
+        "last_login": "Last login ${}"
+      },
+      "feedback": {
+        "user": "User feedback",
+        "reviews": "User reviews",
+        "testimonials": "Testimonials",
+        "customer_reviews": "Customer reviews"
+      }
+    },
+    "shop": {
+      "cart": {
+        "title": "Cart",
+        "empty": "Your ${} is empty!",
+        "continue": "Continue shopping"
+      },
+      "product": {
+        "new": "New",
+        "sale": "On sale",
+        "featured": "Featured",
+        "bestseller": "Bestseller",
+        "add_to_cart": "Add to cart",
+        "add_to_wishlist": "Add to wishlist",
+        "show_x_of_y": "Showing ${} of ${} products",
+        "categories": "Categories",
+        "all_categories": "All categories",
+        "browse_category": "Browse by category",
+        "latest": "Latest products"
+      },
+      "checkout": {
+        "title": "Checkout",
+        "billing": "Billing",
+        "shipping": "Shipping",
+        "payment": "Payment",
+        "method": {
+          "shipping": "Shipping method",
+          "payment": "Payment method"
+        },
+        "percent_off": "${}% off",
+        "coupon": "Coupon code?",
+        "notes": "Notes",
+        "different_address": "Different shipping address?"
+      }
+    },
+    "common": {
+      "actions": {
+        "view": "View",
+        "view_all": "View all",
+        "add": "Add",
+        "buy": "Buy",
+        "submit": "Submit",
+        "send": "Send",
+        "change": "Change",
+        "update": "Update",
+        "reset": "Reset",
+        "clear": "Clear",
+        "load": {
+          "more": "Load more",
+          "less": "Load less",
+          "all": "Load all"
+        }
+      },
+      "forms": {
+        "placeholders": {
+          "optional": "(optional)",
+          "search": "Search here"
+        },
+        "fields": {
+          "username": "Username",
+          "fullname": "Full name",
+          "firstname": "First name",
+          "lastname": "Last name",
+          "name": "Name",
+          "email": "Email address",
+          "password": "Password",
+          "confirm_password": "Confirm password",
+          "phone": "Phone number",
+          "address": "Address",
+          "address_line": "Street address",
+          "street": "Street address",
+          "apt": "Apartment, suite, etc. (optional)",
+          "city": "City",
+          "state": "State",
+          "province": "Province",
+          "zip": "ZIP code",
+          "country": "Country/Region",
+          "message": "Message",
+          "subject": "Subject",
+          "enter_details": "Enter your details below"
+        }
+      },
+      "navigation": {
+        "dashboard": "Dashboard",
+        "quick_links": "Quick links",
+        "contact": "Contact us",
+        "about": "About",
+        "blog": "Blog"
+      },
+      "messages": {
+        "404": {
+          "title": "Sorry, page not found",
+          "description": "The page you're looking for appears to have been moved, deleted or doesn't exist."
+        },
+        "success": "Success",
+        "error": "Error",
+        "warning": "Warning",
+        "info": "Info",
+        "welcome": "Welcome to our store",
+        "email_success": "Your message was sent successfully",
+        "email_error": "Error sending your message",
+        "email_invalid": "Invalid email address",
+        "email_fail": "Failed to send your message",
+        "email_thanks": "Thank you for your message. We check email frequently and will do our best to respond to your inquiry"
+      },
+      "policies": {
+        "terms": "Terms of use",
+        "privacy": "Privacy",
+        "refund": "Refund",
+        "shipping": "Shipping"
+      },
+      "time": {
+        "second": "Second",
+        "minute": "Minute",
+        "hour": "Hour",
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year",
+        "ago": "Ago",
+        "just_now": "Just now",
+        "yesterday": "Yesterday",
+        "today": "Today",
+        "this_week": "This week",
+        "this_month": "This month",
+        "this_year": "This year"
+      }
+    },
+    "marketing": {
+      "new_arrivals": "New arrivals",
+      "limited_offer": "Limited time offer",
+      "discount": "UP TO ${}% OFF",
+      "promo": {
+        "free_shipping": "Free shipping",
+        "free_returns": "Free returns",
+        "secure_payments": "Secure payments",
+        "support": "24/7 dedicated support",
+        "1_1_returns": "1 & 1 returns"
+      },
+      "cta": {
+        "shop_now": "Shop now",
+        "dont_miss": "Don't miss",
+        "dont_miss_out": "Don't miss the latest trends and offers",
+        "hurry": "Hurry",
+        "hurry_up": "Hurry up",
+        "register": "Register to receive news about latest offers and discount codes",
+        "grab_now": "Grab now",
+        "get_it_now": "Get it now",
+        "check_out": "Check out"
+      },
+      "app": {
+        "download": "Download the app"
+      },
+      "subscription": {
+        "subscribe": "Subscribe",
+        "enter_email": "Enter your email"
+      }
+    },
+    "footer": {
+      "follow_us": "Follow us",
+      "contact_us": "Contact us",
+      "contact_info": "Contact information",
+      "location": "Location",
+      "location_map": "Location map",
+      "explore_all_products": "Explore all products",
+      "contact_us_questions": "Contact us for any questions",
+      "payment_methods": "We accept",
+      "copyright": "Copyright",
+      "rights_reserved": "All rights reserved by"
+    },
+    "ui": {
+      "filters": "Filters",
+      "clean_all": "Clean all",
+      "clear_all": "Clear all",
+      "reset_all": "Reset all",
+      "reset_filters": "Reset filters",
+      "more_info": "More info",
+      "less_info": "Less info",
+      "view_more": "View more",
+      "view_less": "View less",
+      "read_more": "Read more",
+      "read_less": "Read less",
+      "show_more": "Show more",
+      "show_less": "Show less"
+    }
   }
-}

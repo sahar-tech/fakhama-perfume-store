@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const CategoryItem = ({ category }) => {
   const [selected, setSelected] = useState(false);
+  const { t } = useTranslation();
   return (
     <button
       className={`${

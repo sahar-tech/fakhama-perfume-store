@@ -2,8 +2,11 @@ import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const BlogDetails = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Breadcrumb title={"Blog Details"} pages={["blog details"]} />

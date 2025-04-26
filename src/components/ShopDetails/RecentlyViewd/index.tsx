@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useCallback, useRef } from "react";
 import "swiper/css/navigation";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
 
 const RecentlyViewdItems = () => {
   const sliderRef = useRef(null);
@@ -22,6 +23,7 @@ const RecentlyViewdItems = () => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slideNext();
   }, []);
+  const { t } = useTranslation();
 
   return (
     <section className="overflow-hidden py-10 bg-card">

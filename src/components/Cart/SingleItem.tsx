@@ -7,10 +7,12 @@ import {
 } from "@/redux/features/cart-slice";
 
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SingleItem = ({ item }) => {
   const [quantity, setQuantity] = useState(item.quantity);
-
+  const { t } = useTranslation();
+  
   const dispatch = useDispatch<AppDispatch>();
 
   const handleRemoveFromCart = () => {

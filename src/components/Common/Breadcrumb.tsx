@@ -1,7 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = ({ title, pages }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="overflow-hidden shadow-breadcrumb pt-[200px] sm:pt-[155px] lg:pt-[95px] xl:pt-[100px]">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0 py-5 xl:py-10">

@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="overflow-hidden">

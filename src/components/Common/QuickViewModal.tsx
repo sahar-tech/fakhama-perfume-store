@@ -9,11 +9,13 @@ import Image from "next/image";
 import { usePreviewSlider } from "@/app/context/PreviewSliderContext";
 import { resetQuickView } from "@/redux/features/quickView-slice";
 import { updateProductDetails } from "@/redux/features/product-details";
+import { useTranslation } from "react-i18next";
 
 const QuickViewModal = () => {
   const { isModalOpen, closeModal } = useModalContext();
   const { openPreviewModal } = usePreviewSlider();
   const [quantity, setQuantity] = useState(1);
+  const { t } = useTranslation();
 
   const dispatch = useDispatch<AppDispatch>();
 

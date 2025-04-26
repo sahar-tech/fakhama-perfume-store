@@ -10,9 +10,11 @@ import { updateProductDetails } from "@/redux/features/product-details";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const ProductItem = ({ item }: { item: Product }) => {
   const { openModal } = useModalContext();
+  const { t } = useTranslation();
 
   const dispatch = useDispatch<AppDispatch>();
 

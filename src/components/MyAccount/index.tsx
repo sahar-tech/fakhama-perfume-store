@@ -4,10 +4,12 @@ import Breadcrumb from "../Common/Breadcrumb";
 import Image from "next/image";
 import AddressModal from "./AddressModal";
 import Orders from "../Orders";
+import { useTranslation } from "react-i18next";
 
 const MyAccount = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
   const [addressModal, setAddressModal] = useState(false);
+  const { t } = useTranslation();
 
   const openAddressModal = () => {
     setAddressModal(true);

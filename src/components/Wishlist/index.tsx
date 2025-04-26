@@ -4,9 +4,11 @@ import Breadcrumb from "../Common/Breadcrumb";
 import { useAppSelector } from "@/redux/store";
 import SingleItem from "./SingleItem";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Wishlist = () => {
   const wishlistItems = useAppSelector((state) => state.wishlistReducer.items);
+  const { t } = useTranslation();
 
   return (
     <>

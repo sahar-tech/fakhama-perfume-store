@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const SearchForm = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="shadow-1 bg-white rounded-xl">
       <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">

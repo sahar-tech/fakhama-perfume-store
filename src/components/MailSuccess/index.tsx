@@ -1,8 +1,11 @@
 import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const MailSuccess = () => {
+    const { t } = useTranslation();
+  
   return (
     <>
       <Breadcrumb title={"MailSuccess"} pages={["MailSuccess"]} />

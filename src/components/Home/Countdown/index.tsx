@@ -1,12 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const CounDown = () => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  const { t } = useTranslation();
 
   const deadline = "December, 31, 2024";
 

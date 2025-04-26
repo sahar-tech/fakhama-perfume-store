@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const PromoBanner = () => {
+    const { t } = useTranslation();
+  
   return (
     <section className="overflow-hidden py-10">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">

@@ -7,11 +7,16 @@ import BestSeller from "./BestSeller";
 import CounDown from "./Countdown";
 import Testimonials from "./Testimonials";
 import Newsletter from "../Common/Newsletter";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <main>
+
       <Hero />
+      <h1>{t('Home.title')}</h1>
       <Categories />
       <NewArrival />
       <PromoBanner />

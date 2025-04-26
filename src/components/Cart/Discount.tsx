@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Discount = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:max-w-[670px] w-full">
       <form>

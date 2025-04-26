@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const LatestPosts = ({ blogs }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="shadow-1 bg-white rounded-xl mt-7.5">
       <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">

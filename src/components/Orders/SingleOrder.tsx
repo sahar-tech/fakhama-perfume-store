@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import OrderActions from "./OrderActions";
 import OrderModal from "./OrderModal";
+import { useTranslation } from "react-i18next";
 
 const SingleOrder = ({ orderItem, smallView }: any) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const { t } = useTranslation();
 
   const toggleDetails = () => {
     setShowDetails(!showDetails);

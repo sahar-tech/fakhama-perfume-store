@@ -1,6 +1,283 @@
 {
-  "Home": {
-    "title": "NextCommerce | قالب متجر إلكتروني",
-    "description": "هذه الصفحة الرئيسية لقالب NextCommerce"
+  "global": {
+    "actions": {
+      "view": "عرض",
+      "hide": "إخفاء",
+      "show": "إظهار",
+      "load": "تحميل",
+      "search": "بحث",
+      "apply": "تطبيق",
+      "reset": "إعادة تعيين",
+      "change": "تغيير",
+      "update": "تحديث",
+      "add": "إضافة",
+      "delete": "حذف",
+      "cancel": "إلغاء",
+      "edit": "تعديل",
+      "buy": "شراء",
+      "send": "إرسال",
+      "submit": "إرسال",
+      "show_all": "عرض الكل ${}",
+      "hide_all": "إخفاء الكل ${}"
+    },
+    "navigation": {
+      "home": "الرئيسية",
+      "shop": "المتجر",
+      "contact": "اتصل بنا",
+      "about": "من نحن",
+      "blog": "المدونة",
+      "account": "الحساب",
+      "cart": "السلة",
+      "wishlist": "المفضلة",
+      "help": "مساعدة",
+      "support": "الدعم",
+      "checkout": "الدفع",
+      "order": "الطلب",
+      "more": "المزيد",
+      "less": "أقل"
+    }
+  },
+  "auth": {
+    "sign_in": "تسجيل الدخول",
+    "sign_out": "تسجيل الخروج",
+    "sign_up": "تسجيل حساب",
+    "sign_in_up": "تسجيل الدخول / تسجيل حساب",
+    "login": "دخول",
+    "register": "تسجيل",
+    "welcome": "مرحباً",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "reset_password": "إعادة تعيين كلمة المرور",
+    "no_account": "ليس لديك حساب؟",
+    "have_account": "لديك حساب بالفعل؟",
+    "welcome_back": "مرحباً بعودتك",
+    "create_account": "إنشاء حساب",
+    "remember_me": "تذكرني"
+  },
+  "user": {
+    "account": "حسابي",
+    "profile": "الملف الشخصي",
+    "member_since": "عضو منذ ${}",
+    "settings": "الإعدادات",
+    "details": "التفاصيل",
+    "details_of": "تفاصيل ${}",
+    "history": "السجل",
+    "recent": "عرضت مؤخراً",
+    "recent_views": "العناصر المعروضة مؤخراً",
+    "orders": {
+      "my_orders": "طلباتي",
+      "tracking": "تتبع الطلب",
+      "summary": "ملخص الطلب",
+      "your_order": "طلبك"
+    },
+    "address": {
+      "book": "دفتر العناوين",
+      "shipping": "عنوان الشحن",
+      "billing": "عنوان الفاتورة",
+      "info": {
+        "shipping": "معلومات الشحن",
+        "billing": "معلومات الفاتورة"
+      }
+    },
+    "password": {
+      "old": "كلمة المرور القديمة",
+      "new": "كلمة المرور الجديدة",
+      "confirm": "تأكيد كلمة المرور الجديدة",
+      "current": "كلمة المرور الحالية"
+    },
+    "greeting": {
+      "hello": "مرحباً ${}!",
+      "hello_logout": "مرحباً ${} (ليس ${}؟ تسجيل خروج)",
+      "last_login": "آخر دخول ${}"
+    },
+    "feedback": {
+      "user": "ملاحظات المستخدمين",
+      "reviews": "تقييمات المستخدمين",
+      "testimonials": "شهادات",
+      "customer_reviews": "تقييمات العملاء"
+    }
+  },
+  "shop": {
+    "cart": {
+      "title": "السلة",
+      "empty": "${} فارغة!",
+      "continue": "مواصلة التسوق"
+    },
+    "product": {
+      "new": "جديد",
+      "sale": "للبيع",
+      "featured": "مميز",
+      "bestseller": "الأكثر مبيعاً",
+      "add_to_cart": "إضافة إلى السلة",
+      "add_to_wishlist": "إضافة إلى المفضلة",
+      "show_x_of_y": "عرض ${} من ${} منتجات",
+      "categories": "الفئات",
+      "all_categories": "جميع الفئات",
+      "browse_category": "تصفح حسب الفئة",
+      "latest": "أحدث المنتجات"
+    },
+    "checkout": {
+      "title": "الدفع",
+      "billing": "الفاتورة",
+      "shipping": "الشحن",
+      "payment": "الدفع",
+      "method": {
+        "shipping": "طريقة الشحن",
+        "payment": "طريقة الدفع"
+      },
+      "percent_off": "خصم ${}%",
+      "coupon": "كود خصم؟",
+      "notes": "ملاحظات",
+      "different_address": "عنوان شحن مختلف؟"
+    }
+  },
+  "common": {
+    "actions": {
+      "view": "عرض",
+      "view_all": "عرض الكل",
+      "add": "إضافة",
+      "buy": "شراء",
+      "submit": "إرسال",
+      "send": "إرسال",
+      "change": "تغيير",
+      "update": "تحديث",
+      "reset": "إعادة تعيين",
+      "clear": "مسح",
+      "load": {
+        "more": "تحميل المزيد",
+        "less": "تحميل أقل",
+        "all": "تحميل الكل"
+      }
+    },
+    "forms": {
+      "placeholders": {
+        "optional": "(اختياري)",
+        "search": "ابحث هنا"
+      },
+      "fields": {
+        "username": "اسم المستخدم",
+        "fullname": "الاسم الكامل",
+        "firstname": "الاسم الأول",
+        "lastname": "الاسم الأخير",
+        "name": "الاسم",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "confirm_password": "تأكيد كلمة المرور",
+        "phone": "رقم الهاتف",
+        "address": "العنوان",
+        "address_line": "عنوان الشارع",
+        "street": "عنوان الشارع",
+        "apt": "شقة، جناح، إلخ. (اختياري)",
+        "city": "المدينة",
+        "state": "الولاية",
+        "province": "المحافظة",
+        "zip": "الرمز البريدي",
+        "country": "البلد/المنطقة",
+        "message": "الرسالة",
+        "subject": "الموضوع",
+        "enter_details": "أدخل تفاصيلك أدناه"
+      }
+    },
+    "navigation": {
+      "dashboard": "لوحة التحكم",
+      "quick_links": "روابط سريعة",
+      "contact": "اتصل بنا",
+      "about": "من نحن",
+      "blog": "المدونة"
+    },
+    "messages": {
+      "404": {
+        "title": "عذراً، الصفحة غير موجودة",
+        "description": "الصفحة التي تبحث عنها يبدو أنها تم نقلها أو حذفها أو أنها غير موجودة."
+      },
+      "success": "نجاح",
+      "error": "خطأ",
+      "warning": "تحذير",
+      "info": "معلومة",
+      "welcome": "مرحباً بكم في متجرنا",
+      "email_success": "تم إرسال رسالتك بنجاح",
+      "email_error": "خطأ في إرسال رسالتك",
+      "email_invalid": "بريد إلكتروني غير صالح",
+      "email_fail": "فشل إرسال رسالتك",
+      "email_thanks": "شكراً لك على رسالتك. نتحقق من البريد الإلكتروني بشكل متكرر وسنبذل قصارى جهدنا للرد على استفسارك"
+    },
+    "policies": {
+      "terms": "شروط الاستخدام",
+      "privacy": "الخصوصية",
+      "refund": "استرداد",
+      "shipping": "الشحن"
+    },
+    "time": {
+      "second": "ثانية",
+      "minute": "دقيقة",
+      "hour": "ساعة",
+      "day": "يوم",
+      "week": "أسبوع",
+      "month": "شهر",
+      "year": "سنة",
+      "ago": "منذ",
+      "just_now": "الآن",
+      "yesterday": "أمس",
+      "today": "اليوم",
+      "this_week": "هذا الأسبوع",
+      "this_month": "هذا الشهر",
+      "this_year": "هذه السنة"
+    }
+  },
+  "marketing": {
+    "new_arrivals": "وصل حديثاً",
+    "limited_offer": "عرض لفترة محدودة",
+    "discount": "خصم حتى ${}%",
+    "promo": {
+      "free_shipping": "شحن مجاني",
+      "free_returns": "إرجاع مجاني",
+      "secure_payments": "دفع آمن",
+      "support": "دعم على مدار الساعة",
+      "1_1_returns": "إرجاع خلال يوم واحد"
+    },
+    "cta": {
+      "shop_now": "تسوق الآن",
+      "dont_miss": "لا تفوت",
+      "dont_miss_out": "لا تفوت أحدث العروض والاتجاهات",
+      "hurry": "أسرع",
+      "hurry_up": "أسرع",
+      "register": "سجل للحصول على آخر العروض وأكواد الخصم",
+      "grab_now": "احصل عليه الآن",
+      "get_it_now": "احصل عليه الآن",
+      "check_out": "تفحص"
+    },
+    "app": {
+      "download": "تنزيل التطبيق"
+    },
+    "subscription": {
+      "subscribe": "اشتراك",
+      "enter_email": "أدخل بريدك الإلكتروني"
+    }
+  },
+  "footer": {
+    "follow_us": "تابعنا",
+    "contact_us": "اتصل بنا",
+    "contact_info": "معلومات الاتصال",
+    "location": "الموقع",
+    "location_map": "خريطة الموقع",
+    "explore_all_products": "استكشف جميع المنتجات",
+    "contact_us_questions": "اتصل بنا لأي استفسار",
+    "payment_methods": "نحن نقبل",
+    "copyright": "حقوق النشر",
+    "rights_reserved": "جميع الحقوق محفوظة لـ"
+  },
+  "ui": {
+    "filters": "الفلاتر",
+    "clean_all": "تنظيف الكل",
+    "clear_all": "مسح الكل",
+    "reset_all": "إعادة تعيين الكل",
+    "reset_filters": "إعادة تعيين الفلاتر",
+    "more_info": "مزيد من المعلومات",
+    "less_info": "معلومات أقل",
+    "view_more": "عرض المزيد",
+    "view_less": "عرض أقل",
+    "read_more": "قراءة المزيد",
+    "read_less": "قراءة أقل",
+    "show_more": "إظهار المزيد",
+    "show_less": "إظهار أقل"
   }
 }

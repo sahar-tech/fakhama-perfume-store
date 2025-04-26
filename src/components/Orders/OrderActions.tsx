@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const OrderActions = ({ toggleEdit, toggleDetails }: any) => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <button

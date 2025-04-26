@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import SingleOrder from "./SingleOrder";
 import ordersData from "./ordersData";
+import { useTranslation } from "react-i18next";
 
 const Orders = () => {
   const [orders, setOrders] = useState<any>([]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetch(`/api/order`)

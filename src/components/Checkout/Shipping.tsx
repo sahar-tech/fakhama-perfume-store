@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Shipping = () => {
   const [dropdown, setDropdown] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white shadow-1 rounded-[10px] mt-7.5">

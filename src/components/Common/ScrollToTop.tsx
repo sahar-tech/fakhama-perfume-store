@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
-
+  const { t } = useTranslation();
+  
   // Top: 0 takes us all the way back to the top of the page
   // Behavior: smooth keeps it smooth!
   const scrollToTop = () => {

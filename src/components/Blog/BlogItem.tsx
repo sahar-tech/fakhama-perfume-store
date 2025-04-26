@@ -2,8 +2,11 @@ import React from "react";
 import { BlogSimpleItem } from "@/types/blogItem";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const BlogItem = ({ blog }: { blog: BlogSimpleItem }) => {
+  const { t } = useTranslation();
+  
   return (
     <div className="shadow-1 bg-white rounded-xl px-4 sm:px-5 pt-5 pb-4">
       <Link href="/blogs/blog-details" className="rounded-md overflow-hidden">

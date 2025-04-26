@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
 
 const PriceDropdown = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
+  const { t } = useTranslation();
 
   const [selectedPrice, setSelectedPrice] = useState({
     from: 0,

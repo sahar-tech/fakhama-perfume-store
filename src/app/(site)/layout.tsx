@@ -12,11 +12,14 @@ import QuickViewModal from "@/components/Common/QuickViewModal";
 import CartSidebarModal from "@/components/Common/CartSidebarModal";
 import { PreviewSliderProvider } from "../context/PreviewSliderContext";
 import PreviewSliderModal from "@/components/Common/PreviewSlider";
+import { Inter } from 'next/font/google';
 
 import ScrollToTop from "@/components/Common/ScrollToTop";
 import PreLoader from "@/components/Common/PreLoader";
-import { ThemeProvider } from "../../components/theme/themeProvider";
+import { ThemeProvider } from "../../components/Header/Theme/themeProvider";
 import '@/app/globals.css'; // This imports your CSS file
+import I18nProvider from "@/components/Header/Translation/I18nProvider";
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -31,33 +34,35 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body>
+      <body className={inter.className}>
         {loading ? (
           <PreLoader />
         ) : (
           <>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <ReduxProvider>
-                <CartModalProvider>
-                  <ModalProvider>
-                    <PreviewSliderProvider>
-                      <Header />
-                      {children}
-                      <QuickViewModal />
-                      <CartSidebarModal />
-                      <PreviewSliderModal />
-                    </PreviewSliderProvider>
-                  </ModalProvider>
-                </CartModalProvider>
-              </ReduxProvider>
-              <ScrollToTop />
-              <Footer />
-            </ThemeProvider>
+            <I18nProvider>
+              <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+              >
+                <ReduxProvider>
+                  <CartModalProvider>
+                    <ModalProvider>
+                      <PreviewSliderProvider>
+                        <Header />
+                        {children}
+                        <QuickViewModal />
+                        <CartSidebarModal />
+                        <PreviewSliderModal />
+                      </PreviewSliderProvider>
+                    </ModalProvider>
+                  </CartModalProvider>
+                </ReduxProvider>
+                <ScrollToTop />
+                <Footer />
+              </ThemeProvider>
+            </I18nProvider>
           </>
         )}
       </body>

@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
+import { useTranslation } from "react-i18next";
 
 const EmptyCart = () => {
   const { closeCartModal } = useCartModalContext();
+  const { t } = useTranslation();
 
   return (
     <div className="text-center">

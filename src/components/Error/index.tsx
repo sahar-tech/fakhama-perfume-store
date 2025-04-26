@@ -2,8 +2,11 @@ import React from "react";
 import Breadcrumb from "../Common/Breadcrumb";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Error = () => {
+    const { t } = useTranslation();
+
   return (
     <>
       <Breadcrumb title={"Error"} pages={["error"]} />

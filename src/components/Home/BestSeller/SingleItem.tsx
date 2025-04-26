@@ -9,10 +9,12 @@ import { addItemToCart } from "@/redux/features/cart-slice";
 import Image from "next/image";
 import Link from "next/link";
 import { addItemToWishlist } from "@/redux/features/wishlist-slice";
+import { useTranslation } from "react-i18next";
 
 const SingleItem = ({ item }: { item: Product }) => {
   const { openModal } = useModalContext();
   const dispatch = useDispatch<AppDispatch>();
+  const { t } = useTranslation();
 
   // update the QuickView state
   const handleQuickViewUpdate = () => {

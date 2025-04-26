@@ -1,8 +1,11 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Signup = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Breadcrumb title={"Signup"} pages={["Signup"]} />

@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ColorsDropdwon = () => {
   const [toggleDropdown, setToggleDropdown] = useState(true);
   const [activeColor, setActiveColor] = useState("blue");
+  const { t } = useTranslation();
 
   const colors = ["red", "blue", "orange", "pink", "purple"];
 

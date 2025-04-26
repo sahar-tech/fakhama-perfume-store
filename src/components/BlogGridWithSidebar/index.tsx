@@ -7,8 +7,11 @@ import LatestPosts from "../Blog/LatestPosts";
 import LatestProducts from "../Blog/LatestProducts";
 import Categories from "../Blog/Categories";
 import shopData from "../Shop/shopData"; 
+import { useTranslation } from "react-i18next";
  
 const BlogGridWithSidebar = () => {
+  const { t } = useTranslation();
+  
   const categories = [
     {
       name: "Desktop",

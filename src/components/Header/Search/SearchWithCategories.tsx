@@ -10,7 +10,8 @@ const SearchWithCategories = ({ onSearch }: { onSearch: (query: string, category
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const categoryRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
 
   const categories = [
     { label: "All Categories", value: "0" },
@@ -41,26 +42,30 @@ const SearchWithCategories = ({ onSearch }: { onSearch: (query: string, category
   }, []);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-2 w-full max-w-2xl">
+    <div className={`flex flex-col sm:flex-row gap-2 w-full max-w-2xl ${isRTL ? 'rtl' : 'ltr'}`}>
+      {/* Search Bar */}
       <form onSubmit={handleSearch} className="flex w-full">
         {/* Categories Dropdown */}
-        <div className="relative" ref={categoryRef}>
+        <div className={`relative ${isRTL ? 'rtl' : 'ltr'}`} ref={categoryRef}>
           <button
             type="button"
             onClick={() => setIsCategoryOpen(!isCategoryOpen)}
-            className="flex items-center justify-between h-full px-4 py-2 bg-background hover:bg-background text-foreground border border-gray-300 rounded-l-lg focus:outline-none"
+            className={`flex items-center justify-between h-full px-4 py-2 bg-background hover:bg-background text-foreground border border-gray-300 ${isRTL ? 'rounded-r-lg' : 'rounded-l-lg'} focus:outline-none`}
             style={{ minWidth: '160px' }}
           >
             <span className="truncate mr-2">
               {categories.find(c => c.value === selectedCategory)?.label}
             </span>
-            <ChevronDown className={`w-4 h-4 transition-transform ${isCategoryOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-4 h-4 transition-transform ${isRTL && isCategoryOpen ? 'rotate-180' : ''}`}/>
           </button>
 
           {isCategoryOpen && (
             <div
               ref={dropdownRef}
-              className="absolute z-50 mt-1 w-full bg-background text-foreground border border-border rounded-md shadow-lg"
+              className={`absolute z-50 mt-1 w-full bg-background text-foreground border border-border rounded-md shadow-lg ${
+                isRTL ? 'text-right' : 'text-left'
+              }`}
+              dir={isRTL ? 'rtl' : 'ltr'}
             >
               {categories.map((category) => (
                 <button
@@ -71,7 +76,9 @@ const SearchWithCategories = ({ onSearch }: { onSearch: (query: string, category
                     setIsCategoryOpen(false);
                   }}
                   className={`w-full text-left px-4 py-2 hover:text-blue dark:hover:text-white ${
-                    selectedCategory === category.value ? 'bg-blue-50 font-medium' : ''
+                    selectedCategory === category.value ? 'bg-blue-50 font-medium' : '' 
+                  } ${
+                    isRTL ? 'text-right' : 'text-left'
                   }`}
                 >
                   {category.label}
@@ -82,17 +89,18 @@ const SearchWithCategories = ({ onSearch }: { onSearch: (query: string, category
         </div>
 
         {/* Search Input */}
-        <div className="relative flex-1 flex items-center border border-gray-300 rounded-r-lg overflow-hidden">
+        <div className={`relative flex-1 flex items-center border border-gray-300 ${isRTL ? 'rounded-l-lg' : 'rounded-r-lg'} overflow-hidden`}>
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="I am shopping for..."
             className="w-full h-full px-4 py-2 focus:outline-none"
+            dir={isRTL ? 'rtl' : 'ltr'}
           />
           <button
             type="submit"
-            className="absolute right-3 text-gray-500 hover:text-blue-500"
+            className={`absolute ${isRTL ? 'left-3' : 'right-3'} text-gray-500 hover:text-blue-500`}
           >
             <Search className="w-5 h-5" />
           </button>

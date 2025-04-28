@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { menuData } from "./menuData";
+import { getMenuData } from './menuData';
 import Dropdown from "./Dropdown";
 import { useAppSelector } from "@/redux/store";
 import { useSelector } from "react-redux";
@@ -18,15 +18,16 @@ const Header = () => {
     console.log('Searching for:', query, 'in category:', category);
     // Implement your search logic here
   };
-  const { t } = useTranslation();
-
-  const [searchQuery, setSearchQuery] = useState("");
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const isRTL = currentLanguage === 'ar';
   const [navigationOpen, setNavigationOpen] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const { openCartModal } = useCartModalContext();
 
   const product = useAppSelector((state) => state.cartReducer.items);
   const totalPrice = useSelector(selectTotalPrice);
+  const menuData = getMenuData(t);
 
   const handleOpenCartModal = () => {
     openCartModal();
@@ -46,7 +47,7 @@ const Header = () => {
   });
 
   return (
-    <header
+    <header dir={isRTL ? 'rtl' : 'ltr'}
       className={`fixed left-0 top-0 w-full z-9999 bg-background transition-all ease-in-out duration-300 ${stickyMenu && "shadow "
         }`}
     >

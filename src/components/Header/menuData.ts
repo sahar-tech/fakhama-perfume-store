@@ -1,27 +1,39 @@
 import { Menu } from "@/types/Menu";
 
-export const menuData: Menu[] = [
+export const getMenuData = (t: any) : Menu[]  =>  [
   {
     id: 1,
-    title: "Popular",
+    title: t("global.navigation.home"),
     newTab: false,
     path: "/",
   },
   {
     id: 2,
-    title: "Shop",
+    title: t("global.navigation.shop"),
     newTab: false,
     path: "/shop-with-sidebar",
   },
   {
     id: 3,
-    title: "Contact",
+    title: t("global.navigation.blog"),
+    newTab: false,
+    path: "/blogs/blog-grid",
+  },
+  {
+    id: 4,
+    title: t("global.navigation.contact"),
     newTab: false,
     path: "/contact",
   },
   {
+    id: 5,
+    title: t("global.navigation.about"),
+    newTab: false,
+    path: "/about",
+  },
+  {
     id: 6,
-    title: "pages",
+    title: t("global.navigation.more"),
     newTab: false,
     path: "/",
     submenu: [
@@ -95,7 +107,7 @@ export const menuData: Menu[] = [
   },
   {
     id: 7,
-    title: "blogs",
+    title: t("global.navigation.help"),
     newTab: false,
     path: "/",
     submenu: [

@@ -279,5 +279,18 @@
       "read_less": "Lire moins",
       "show_more": "Afficher plus",
       "show_less": "Afficher moins"
+    },
+    "language":{
+      "en": "Anglais",
+      "es": "Espagnol",
+      "fr": "Français",
+      "de": "Allemand",
+      "it": "Italien",
+      "pt": "Portugais",
+      "zh": "Chinois",
+      "ja": "Japonais",
+      "ru": "Russe",
+      "ar": "Arabe",
+      "ko": "Coréen"
     }
   }

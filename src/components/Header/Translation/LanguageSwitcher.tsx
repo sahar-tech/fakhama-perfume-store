@@ -5,17 +5,17 @@ import { ChevronDown, Languages } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { t,i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const languageRef = useRef<HTMLDivElement>(null);
 
+
   const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'ar', name: 'العربية' }, // Arabic
-    { code: 'fr', name: 'Français' }, // French
+    { code: 'en', name: t('language.en') },
+    { code: 'ar', name: t('language.ar') }, // Arabic
+    { code: 'fr', name: t('language.fr') }, // French
     // Add more languages as needed
   ];
-
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (lng: string) => {
@@ -27,7 +27,7 @@ export const LanguageSwitcher = () => {
     }
   };
 
- // Close dropdown when clicking outside
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (languageRef.current && !languageRef.current.contains(event.target as Node)) {
@@ -44,33 +44,38 @@ export const LanguageSwitcher = () => {
       {/* Dropdown Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 border-border py-2 rounded-lg bg-background text-foreground hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        className="flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg bg-background hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
         aria-haspopup="true"
-        aria-expanded={isOpen}>
-          
-        <Languages className="w-4 h-4" />
-        <span className="text-sm">{currentLanguage.code.toUpperCase()}</span>
-        <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        aria-expanded={isOpen}
+      >
+        {/* Small gray text above icon */}
+        <span className="text-[8px] text-gray-500 dark:text-gray-400 uppercase">
+          {currentLanguage.code}
+        </span>
+        
+        {/* Large icon */}
+        <Languages className="w-5 h-5 text-foreground" />
+        
+        
       </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute left-3 mt-1 w-25 border-border border rounded-md shadow-lg bg-background text-foreground z-50">
+        <div className="absolute right-0 mt-2 w-40 border border-border rounded-md shadow-lg bg-background text-foreground z-50">
           <div className="py-1">
             {languages.map((language) => (
               <button
                 key={language.code}
                 onClick={() => changeLanguage(language.code)}
-                className={`w-full text-left px-4 py-2 text-sm flex items-center gap-2 dark:hover:text-white hover:text-blue ${
+                className={`w-full text-left px-4 py-2 text-sm flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
                   i18n.language === language.code
-                    ? 'bg-background dark:bg-background text-foreground'
-                    : 'text-foreground dark:text-foreground hover:bg-background'
+                    ? 'bg-blue-50 dark:bg-gray-800 font-medium'
+                    : 'text-foreground'
                 }`}
-                dir={language.code === 'ar' ? 'rtl' : 'ltr'}
               >
                 <span className="flex-1">{language.name}</span>
                 {i18n.language === language.code && (
-                  <span className="text-foreground">✓</span>
+                  <span className={`text-blue-500 dark:text-blue-400 ${language.code != 'ar' ? 'rtl' : 'ltr'}`}>✓</span>
                 )}
               </button>
             ))}

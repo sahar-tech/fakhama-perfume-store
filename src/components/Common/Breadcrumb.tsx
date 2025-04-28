@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-const Breadcrumb = ({ title, pages }) => {
+const Breadcrumb = ({ title/*, pages */}) => {
   const { t } = useTranslation();
   
   return (
